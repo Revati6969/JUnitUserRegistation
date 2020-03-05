@@ -32,10 +32,20 @@ public class TestRegistration {
         boolean Email=obj.checkEmail("abc-100@yahoo.com");
         Assert.assertTrue(Email);
     }
+    @Test
+    public void givenEmail_wheninValid_thenFalse() {
+        boolean Email=obj.checkEmail("abc-100.@yahoo.com");
+        Assert.assertFalse(Email);
+    }
 
     @Test
     public void givenMobileNumber_whenValid_thenTrue() {
         boolean MobileNumber=obj.checkMobileNumber("91 1234567890");
         Assert.assertTrue(MobileNumber);
+    }
+    @Test
+    public void givenMobileNumber_wheninValid_thenFalse() {
+        boolean MobileNumber=obj.checkMobileNumber("91 234567890");
+        Assert.assertFalse(MobileNumber);
     }
 }
