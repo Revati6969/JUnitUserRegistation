@@ -14,4 +14,16 @@ public class TestRegistration {
         boolean firstname=obj.checkName("capital");
         Assert.assertFalse(firstname);
     }
+
+
+    @Test
+    public void givenlastName_whenValid_thenTrue() {
+        boolean lastname=obj.checkName("Capital");
+        Assert.assertTrue(lastname);
+    }
+    @Test
+    public void givenlastName_wheninValid_thenFalse() {
+        boolean lastname=obj.checkName("capital");
+        Assert.assertFalse(lastname);
+    }
 }
