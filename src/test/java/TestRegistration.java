@@ -10,7 +10,7 @@ public class TestRegistration {
         Assert.assertTrue(firstname);
     }
     @Test
-    public void givenfirstName_wheninValid_thenFalse() {
+    public void givenfirstName_whenInvalid_thenFalse() {
         boolean firstname=obj.checkName("capital");
         Assert.assertFalse(firstname);
     }
@@ -22,7 +22,7 @@ public class TestRegistration {
         Assert.assertTrue(lastname);
     }
     @Test
-    public void givenlastName_wheninValid_thenFalse() {
+    public void givenlastName_whenInvalid_thenFalse() {
         boolean lastname=obj.checkName("capital");
         Assert.assertFalse(lastname);
     }
@@ -33,7 +33,7 @@ public class TestRegistration {
         Assert.assertTrue(Email);
     }
     @Test
-    public void givenEmail_wheninValid_thenFalse() {
+    public void givenEmail_whenInvalid_thenFalse() {
         boolean Email=obj.checkEmail("abc-100.@yahoo.com");
         Assert.assertFalse(Email);
     }
@@ -44,8 +44,19 @@ public class TestRegistration {
         Assert.assertTrue(MobileNumber);
     }
     @Test
-    public void givenMobileNumber_wheninValid_thenFalse() {
+    public void givenMobileNumber_whenInvalid_thenFalse() {
         boolean MobileNumber=obj.checkMobileNumber("91 234567890");
         Assert.assertFalse(MobileNumber);
+    }
+
+    @Test
+    public void givenPassword_whenValid_thenTrue() {
+        boolean Password=obj.checkPassword("asdfgghh");
+        Assert.assertTrue(Password);
+    }
+    @Test
+    public void givenPassword_whenInvalid_thenFalse() {
+        boolean Password=obj.checkPassword("asdgh");
+        Assert.assertFalse(Password);
     }
 }
