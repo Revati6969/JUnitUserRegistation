@@ -45,18 +45,20 @@ public class TestRegistration {
     }
     @Test
     public void givenMobileNumber_whenInvalid_thenFalse() {
-        boolean MobileNumber=obj.checkMobileNumber("91 234567890");
+        boolean MobileNumber=obj.checkMobileNumber("91 123456789");
         Assert.assertFalse(MobileNumber);
     }
 
+
+
     @Test
-    public void givenPassword_whenValid_thenTrue() {
-        boolean Password=obj.checkPassword("asdfgghh");
-        Assert.assertTrue(Password);
+    public void givenPassword1_whenvalid_thenTrue() {
+        boolean Password1=obj.checkPassword("adjadfTGFgh");
+        Assert.assertTrue(Password1);
     }
     @Test
-    public void givenPassword_whenInvalid_thenFalse() {
-        boolean Password=obj.checkPassword("asdgh");
-        Assert.assertFalse(Password);
+    public void givenPassword1_whenInvalid_thenFalse() {
+        boolean Password1=obj.checkPassword("adjadfgh");
+        Assert.assertFalse(Password1);
     }
 }
