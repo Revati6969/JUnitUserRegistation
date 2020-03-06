@@ -71,7 +71,7 @@ public class TestRegistration {
 
     @Test
     public void givenPassword2_whenValid_thenTrue() {
-        boolean Password2=obj.checkPassword2("TTdhfggfhg564");
+        boolean Password2=obj.checkPassword2("19RevatiTT");
         Assert.assertTrue(Password2);
     }
     @Test
