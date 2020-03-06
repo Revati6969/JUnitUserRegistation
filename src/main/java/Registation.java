@@ -9,6 +9,7 @@ public class Registation {
     String pattern4="^[a-zA-Z0-9]{8,}$";
     String pattern5="^([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*)";
     String pattern6="^([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*)|([a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*)$";
+    String pattern7="^([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*[0-9]*[a-zA-Z0-9]*[@#$&]*[a-zA-Z0-9]*)|([a-zA-Z0-9]*[@#$&]*[a-zA-Z0-9]*[A-Z]*[a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*)|([a-zA-Z0-9]*[0-9]*[a-zA-Z0-9]*[@#$&]+[a-zA-Z0-9]*[A-Z]*[a-zA-Z0-9]*)$";
 
     public static void main(String[] args) {
         System.out.println("Welcome to User Registation");
@@ -42,6 +43,15 @@ public class Registation {
     public boolean checkPassword2(String pass) {
         if(pass.length()>=8) {
             return (Pattern.matches(pattern6,pass));
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean checkPassword3(String pass) {
+        if(pass.length()>=8) {
+            return (Pattern.matches(pattern7,pass));
         }
         else {
             return false;
